@@ -53,7 +53,8 @@ namespace MyWebApi
                         // валидация ключа безопасности
                         ValidateIssuerSigningKey = true
                     };
-                });
+                })
+                .AddNegotiate();
             /* services
                 .AddAuthentication(NegotiateDefaults.AuthenticationScheme)
                 .AddNegotiate(); */
