@@ -51,7 +51,7 @@ namespace MyWebApi
                         ValidateIssuerSigningKey = true
                     };
                 })
-                .AddNegotiate()
+                .AddNegotiate();
                 // То, что ниже - не нужно!!! Важно правильно сформировать keytab!!!
                 /* .AddNegotiate(options =>
                 {
