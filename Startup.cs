@@ -51,7 +51,9 @@ namespace MyWebApi
                         ValidateIssuerSigningKey = true
                     };
                 })
-                .AddNegotiate(options =>
+                .AddNegotiate()
+                // То, что ниже - не нужно!!! Важно правильно сформировать keytab!!!
+                /* .AddNegotiate(options =>
                 {
                     if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
                     {
@@ -60,7 +62,7 @@ namespace MyWebApi
                             settings.Domain = "mydomain.net";
                         });
                     }
-                });
+                }); */
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
